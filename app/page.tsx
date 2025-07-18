@@ -17,10 +17,22 @@ export default function Home() {
     setForm(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    alert("RSVP submitted! 🎉");
-  };
+const handleSubmit = async (e: any) => {
+  e.preventDefault();
+
+  const res = await fetch('/api/submit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(form),
+  });
+
+  if (res.ok) {
+    alert('RSVP submitted! 🎉');
+    setForm({ name: '', email: '', date: '', spotify: '', guests: '' });
+  } else {
+    alert('Something went wrong. Please try again!');
+  }
+};
 
   return (
     <main className="relative w-full h-screen overflow-y-auto">
