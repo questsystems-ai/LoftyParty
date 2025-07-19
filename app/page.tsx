@@ -65,7 +65,7 @@ export default function Home() {
 
         <div className="relative z-10 w-full max-w-md bg-white/10 p-6 rounded-2xl shadow-xl space-y-4 backdrop-blur-md">
           <p className="text-center text-base font-light">
-            📍 Somewhere in the Bangkok Bay retail and office complex
+            📍 Somewhere in the Bangkok Bay retail and office complex...
           </p>
           <div className="text-base text-center">
             <label className="block mb-2 font-semibold">🗓️ When can you come?</label>

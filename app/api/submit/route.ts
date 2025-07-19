@@ -5,6 +5,7 @@ const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY!;
 
 export async function POST(req: Request) {
   const data = await req.json();
+  console.log("Received RSVP:", data);
 
   const res = await fetch(`${SUPABASE_URL}/rest/v1/rsvps`, {
     method: 'POST',
@@ -21,7 +22,8 @@ export async function POST(req: Request) {
   });
 
   if (!res.ok) {
-    console.error(await res.text());
+    const error = await res.text();
+    console.error("Supabase insert failed:", error);
     return NextResponse.json({ error: 'Insert failed' }, { status: 500 });
   }
 
