@@ -10,6 +10,7 @@ export default function Home() {
     dates: [] as string[],
     spotify: "",
     guests: "",
+    comments: "",
   });
 
   const handleChange = (e: any) => {
@@ -36,7 +37,7 @@ export default function Home() {
     });
     if (res.ok) {
       alert('RSVP submitted! 🎉');
-      setForm({ name: '', email: '', dates: [], spotify: '', guests: '' });
+      setForm({ name: '', email: '', dates: [], spotify: '', guests: '', comments: ''});
     } else {
       alert('Something went wrong. Please try again!');
     }
@@ -69,7 +70,7 @@ export default function Home() {
           <div className="text-base text-center">
             <label className="block mb-2 font-semibold">🗓️ When can you come?</label>
             <div className="flex flex-wrap gap-4 justify-center">
-              {["July 31", "Aug 1", "Aug 2"].map(date => (
+              {["Jul 24", "Jul 25", "Jul 26"].map(date => (
                 <label key={date} className="inline-flex items-center space-x-2">
                   <input
                     type="checkbox"
@@ -115,6 +116,14 @@ export default function Home() {
             type="number"
             value={form.guests}
             onChange={handleChange}
+          />
+          <textarea
+            name="comments"
+            value={form.comments}
+            onChange={handleChange}
+            placeholder="Anything else you'd like us to know?"
+            rows={4}
+            className="w-full p-2 rounded-md text-black placeholder:text-gray-500"
           />
           <p className="text-sm text-center mt-2">
             🍻 Please bring your own alcohol or cannabis!<br />
