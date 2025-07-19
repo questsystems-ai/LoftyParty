@@ -48,7 +48,7 @@ export default function Home() {
       <BoomerangVideo />
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4 text-white text-center pointer-events-none">
         <h1 className="text-4xl md:text-6xl font-extrabold drop-shadow-md leading-tight">
-          Lofty Office Party<br />Summer '25
+          Lofty Appreciation Party<br />Summer '25
         </h1>
         <div className="mt-4 animate-bounce opacity-70">⬇️</div>
       </div>
