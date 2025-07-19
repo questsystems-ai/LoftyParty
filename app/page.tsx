@@ -127,7 +127,11 @@ export default function Home() {
           />
           <p className="text-sm text-center mt-2">
             🍻 Please bring your own alcohol or cannabis!<br />
-            ✨ Sparkling NA drinks & protein shakes provided.
+            ✨ Sparkling NA drinks & protein shakes provided.<br />
+            NOTE: if nobody comes NO WORRIES it was super fun<br />
+            to build this site and I learned a lot!<br />
+            And I cleaned my office which was a disaster.<br />
+            Feel free to just swing by and see what I do.<br /> 
           </p>
           <p className="text-center text-base font-bold pt-2 animate-pulse">Long Live Lofty 🦄</p>
           <button
