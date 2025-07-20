@@ -70,7 +70,7 @@ export default function Home() {
           <div className="text-base text-center">
             <label className="block mb-2 font-semibold">🗓️ When can you come?</label>
             <div className="flex flex-wrap gap-4 justify-center">
-              {["Jul 24", "Jul 25", "Jul 26"].map(date => (
+              {["Jul 24", "Jul 25", "Jul 26", "Jul 31", "Aug 1", "Aug 2"].map(date => (
                 <label key={date} className="inline-flex items-center space-x-2">
                   <input
                     type="checkbox"
